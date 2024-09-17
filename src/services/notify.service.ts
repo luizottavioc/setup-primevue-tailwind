@@ -11,7 +11,7 @@ const TYPE_INFO: TypeNotify = 'info'
 const TYPE_SUCCESS: TypeNotify = 'success'
 const DEFAULT_MS_DURATION: number = 8000
 
-export function successToast(options: NotifyOptions): Notify {
+export function successNotify(options: NotifyOptions): Notify {
   const { title, message, url, msDuration } = options
 
   push.success({
@@ -29,7 +29,7 @@ export function successToast(options: NotifyOptions): Notify {
   }
 }
 
-export function infoToast(options: NotifyOptions): Notify {
+export function infoNotify(options: NotifyOptions): Notify {
   const { title, message, url, msDuration } = options
 
   push.info({
@@ -47,7 +47,7 @@ export function infoToast(options: NotifyOptions): Notify {
   }
 }
 
-export function errorToast(options: NotifyOptions): Notify {
+export function errorNotify(options: NotifyOptions): Notify {
   const { title, message, url, msDuration } = options
 
   push.error({
@@ -65,10 +65,10 @@ export function errorToast(options: NotifyOptions): Notify {
   }
 }
 
-export function promiseToast(loadMessage: string): NotifyPromise {
+export function promiseNotify(loadMessage: string): NotifyPromise {
   const Notify = push.promise(loadMessage)
 
-  const successToast = ({ title, ...options }: NotifyOptions): Notify => {
+  const successNotify = ({ title, ...options }: NotifyOptions): Notify => {
     Notify.resolve(title)
 
     return {
@@ -78,7 +78,7 @@ export function promiseToast(loadMessage: string): NotifyPromise {
     }
   }
 
-  const errorToast = ({ title, ...options }: NotifyOptions): Notify => {
+  const errorNotify = ({ title, ...options }: NotifyOptions): Notify => {
     Notify.reject(title)
 
     return {
@@ -89,7 +89,7 @@ export function promiseToast(loadMessage: string): NotifyPromise {
   }
 
   return {
-    resolve: successToast,
-    reject: errorToast
+    resolve: successNotify,
+    reject: errorNotify
   }
 }

@@ -9,5 +9,13 @@ export default [
   ...pluginVue.configs['flat/essential'],
   ...pluginVue.configs['flat/strongly-recommended'],
   ...pluginVue.configs['flat/recommended'],
-  eslintPluginPrettierRecommended
+  eslintPluginPrettierRecommended,
+  {
+    files: ['*.vue', '**/*.vue'],
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    }
+  }
 ]
