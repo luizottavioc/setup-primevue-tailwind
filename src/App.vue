@@ -1,6 +1,6 @@
 <template>
   <main
-    class="absolute flex h-svh w-svw flex-col bg-slate-200 text-slate-950 transition-colors dark:bg-slate-900 dark:text-slate-50"
+    class="absolute flex h-svh w-svw flex-col overflow-auto bg-slate-200 text-slate-950 transition-colors dark:bg-slate-900 dark:text-slate-50"
   >
     <section class="mx-auto w-full max-w-7xl">
       <RouterView />
