@@ -3,7 +3,7 @@
     title="Notifications"
     description="Notifications with Notivue library"
   >
-    <div class="mt-2 flex items-center justify-center gap-2">
+    <div class="flex items-center justify-center gap-2">
       <button
         class="flex items-center justify-center gap-2 rounded-md border-green-600 bg-green-500/10 p-2 text-xs font-semibold text-green-600 shadow-sm dark:border-green-400 dark:text-green-400"
         @click="

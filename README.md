@@ -1,6 +1,8 @@
 # Front-end: setup-primevue-tailwind
 
-This repository sets up a project structure using PrimeVue and TailwindCSS. The proposed folder structure is designed to keep the project organized, scalable, and maintainable. Below, you will find an explanation of the structure and the purpose of each folder.
+This repository sets up a project structure using PrimeVue and TailwindCSS. The proposed folder structure is designed to keep the project organized, scalable, and maintainable. Below, you will find an explanation of the structure and the purpose of each folder. 
+- Check the demo: [setup-primevue-tailwind](https://luizottavioc-setup-primevue-tailwind.netlify.app/)
+- How to use: [Steps to use the setup](#steps-to-use-the-setup)
 
 ## Technologies
 This project is built with the following technologies and libraries:
@@ -88,3 +90,33 @@ The types folder is where TypeScript definition files (*.d.ts) are placed to def
 
 ### Modular Structure
 One of the key features of this structure is that each module under modules/ follows a self-contained structure. This makes it easier to maintain, develop, and isolate logic per module. By having components, pages, services, stores, and types for each module, we ensure that configurations remain highly modularized and easy to manage.
+
+## Steps to use the setup
+- Clone the Repository: 
+```bash
+git clone git@github.com:luizottavioc/setup-primevue-tailwind.git [project-folder-name]
+```
+- Navigate to the Project Directory:
+```bash
+cd [project-folder-name]
+```
+
+- Remove Existing Git History:
+```bash
+rm -rf .git
+```
+
+- Update the "name" in `package.json` and initialize a New Git Repository:
+```bash
+git init
+```
+
+- Install Dependencies:
+```bash
+npm install
+```
+
+- Run the Development Server
+```bash
+npm run dev
+```

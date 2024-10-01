@@ -1,10 +1,10 @@
 <template>
   <DefaultContainer
     title="Light/Dark theme"
-    description="Class theme with Tailwind"
+    :description="`Class theme with Tailwind. The current theme is ${theme}.`"
   >
     <button
-      class="mt-2 flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/20 text-primary-600 dark:text-primary-400"
+      class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500/10 text-primary-600 shadow-sm transition-colors hover:bg-primary-500/20 dark:text-primary-400"
       @click="applicationStore.toggleTheme()"
     >
       <PhSun
@@ -14,9 +14,6 @@
       />
       <PhMoon v-else class="h-4 w-4 animate-show-fade-in" weight="bold" />
     </button>
-    <p class="text-sm">
-      Current theme: <b>{{ theme }}</b>
-    </p>
   </DefaultContainer>
 </template>
 
